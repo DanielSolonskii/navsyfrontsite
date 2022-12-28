@@ -4,7 +4,7 @@ import store from "@/store";
 import router from "@/router";
 import AuthService from "@/services/auth";
 
-let baseUrl = 'http://localhost:8081'
+let baseUrl = 'http://1151803-cd96079.tw1.ru'
 let versionApi = '/api/'
 let token = localStorage.getItem('access_token');
 

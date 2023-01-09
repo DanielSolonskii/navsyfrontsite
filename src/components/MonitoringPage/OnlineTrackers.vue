@@ -1302,10 +1302,12 @@
 
         //console.log(this.layerCars);
         this.connection = MonitoringService.connectionWS();
+        console.log(this.connection);
         this.connection.onmessage = (event) => {
           try {
             let msg = JSON.parse(event.data);
-            let car = this.cars.find(x => x.deviceId === msg.BlockNumber);
+            console.log(msg);
+            /*let car = this.cars.find(x => x.deviceId === msg.BlockNumber);
             if (car && msg.latitude && msg.longitude) {
               console.log(car.deviceId, msg.latitude, msg.longitude, this.visibleAllMarker)
               car.ll = latLng(msg.latitude, msg.longitude);
@@ -1313,6 +1315,7 @@
               car.course = msg.course;
               car.speed = msg.speed;  
               car.fuel_level = msg.fuel_level;
+              */
               //this.updateCourse(car);
               //this.getIcon(car.deviceId, car.course);
             }

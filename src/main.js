@@ -35,7 +35,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
 });
 
-var marker = L.marker([51.5, -0.09]).addTo(map);
+
 
 AuthService.restore_authorization();
 

@@ -1302,8 +1302,9 @@
 
         //console.log(this.layerCars);
         this.connection = MonitoringService.connectionWS();
-        console.log(this.connection);
+        
         this.connection.onmessage = (event) => {
+          console.log(event.data);
           try {
             let msg = JSON.parse(event.data);
             console.log(msg);

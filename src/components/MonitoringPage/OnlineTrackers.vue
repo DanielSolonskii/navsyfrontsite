@@ -1307,11 +1307,11 @@
             let msg = JSON.parse(event.data);
             let car = this.cars.find(x => x.deviceId === msg.BlockNumber);
             if (car && msg.latitude && msg.longitude) {
-              //console.log(car.deviceId, msg.latitude, msg.longitude, this.visibleAllMarker)
+              console.log(car.deviceId, msg.latitude, msg.longitude, this.visibleAllMarker)
               car.ll = latLng(msg.latitude, msg.longitude);
               car.visible_marker = this.visibleAllMarker;
               car.course = msg.course;
-              car.speed = msg.speed;
+              car.speed = msg.speed;  
               car.fuel_level = msg.fuel_level;
               //this.updateCourse(car);
               //this.getIcon(car.deviceId, car.course);

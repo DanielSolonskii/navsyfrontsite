@@ -1319,18 +1319,18 @@
               //this.updateCourse(car);
               //this.getIcon(car.deviceId, car.course);
             }
-          } catch (e) {
+           catch (e) {
             console.log(e);
           }
         }
         this.connection.onclose = function (event) {
-          console.log('Close', event)
+          console.log('Close', event);
         }
         this.connection.onopen = function () {
-          console.log("Successfully connected")
+          console.log("Successfully connected");
         }
         this.connection.error = function (error) {
-          console.log('Error', error)
+          console.log('Error', error);
         }
       },
       loadCars() {
